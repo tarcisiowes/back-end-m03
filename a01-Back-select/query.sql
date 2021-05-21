@@ -1,0 +1,18 @@
+SELECT compositor, id FROM musicas;
+SELECT compositor, tempo FROM musicas WHERE tempo > 240;
+SELECT compositor, composicao, id FROM musicas WHERE id BETWEEN 47 AND 123;
+SELECT * FROM musicas WHERE compositor IS NOT null AND tempo < 300 AND compositor NOT ILIKE 'bach';
+SELECT * FROM musicas WHERE compositor ILIKE 'mozart' OR compositor ILIKE 'bach';
+SELECT * FROM musicas ORDER BY ID DESC;
+SELECT * FROM musicas ORDER BY tempo DESC;
+SELECT * FROM musicas ORDER BY tempo LIMIT 5;
+SELECT * FROM musicas ORDER BY tempo DESC LIMIT 10;
+SELECT * FROM musicas ORDER BY tempo LIMIT 10 OFFSET 5;
+SELECT * FROM musicas LIMIT 10 OFFSET 3*10;
+SELECT * FROM musicas LIMIT 12 OFFSET 5*12;
+SELECT DISTINCT * FROM musicas WHERE compositor IS NOT NULL;
+SELECT DISTINCT compositor, composicao FROM musicas;
+SELECT * FROM musicas WHERE compositor LIKE 'Bra%';
+SELECT * FROM musicas WHERE ritmo LIKE '%troppo';
+SELECT * FROM musicas WHERE COMPOSICAO ILIKE '%quartet%';
+SELECT * FROM musicas WHERE COMPOSICAO NOT ILIKE '%quartet%';
